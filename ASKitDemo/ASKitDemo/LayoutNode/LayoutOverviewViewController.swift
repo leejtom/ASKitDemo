@@ -35,23 +35,23 @@ class LayoutOverviewViewController: ASDKViewController<ASTableNode> {
  
 extension LayoutOverviewViewController: ASTableDataSource {
     func tableNode(_ tableNode: ASTableNode, numberOfRowsInSection section: Int) -> Int {
-//        return layouts.count
-        return Int(1000)
+        return layouts.count
+//        return Int(1000)
     }
     
     func tableNode(_ tableNode: ASTableNode, nodeBlockForRowAt indexPath: IndexPath) -> ASCellNodeBlock {
-//        let layout = layouts[indexPath.row]
         return {
-//            return OverviewCellNode(layoutType: layout)
-            return UserProfileCellNode(indexPath.row)
+            let layout = self.layouts[indexPath.row]
+            return OverviewCellNode(layoutType: layout)
+//            return UserProfileCellNode(indexPath.row)
         }
     }
 }
 
 extension LayoutOverviewViewController: ASTableDelegate {
     func tableNode(_ tableNode: ASTableNode, didSelectRowAt indexPath: IndexPath) {
-//        let layoutType = (tableNode.nodeForRow(at: indexPath) as! OverviewCellNode).layoutType
-        let layoutType = (tableNode.nodeForRow(at: indexPath) as! UserProfileCellNode).layoutType
+        let layoutType = (tableNode.nodeForRow(at: indexPath) as! OverviewCellNode).layoutType
+//        let layoutType = (tableNode.nodeForRow(at: indexPath) as! UserProfileCellNode).layoutType
         let detail = LayoutViewController(layoutType: layoutType)
         self.navigationController?.pushViewController(detail, animated: true)
     }

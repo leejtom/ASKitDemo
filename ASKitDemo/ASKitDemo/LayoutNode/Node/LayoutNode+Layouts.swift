@@ -12,6 +12,7 @@ extension HeaderWithRightAndLeftItems {
         let nameLocationStack = ASStackLayoutSpec.vertical() // 相对布局-垂直方向的盒子
         nameLocationStack.style.flexShrink = 1.0 //
         nameLocationStack.style.flexGrow = 1.0
+//        nameLocationStack.style.flexBasis = ASDimensionMake("40%")
         
         if postLocationNode.attributedText != nil {
             nameLocationStack.children = [userNameNode, postLocationNode]
@@ -19,12 +20,16 @@ extension HeaderWithRightAndLeftItems {
             nameLocationStack.children = [userNameNode]
         }
         
+        let postTimeStack = ASStackLayoutSpec.vertical()
+//        postTimeStack.style.flexBasis = ASDimensionMake("60%")
+        postTimeStack.children = [postTimeNode]
+        
         // 申明一个水平排列的盒子
         let headerStackSpec = ASStackLayoutSpec(direction: .horizontal,
                                                 spacing: 40,
                                                 justifyContent: .start,
                                                 alignItems: .center,
-                                                children: [nameLocationStack, postTimeNode])
+                                                children: [nameLocationStack, postTimeStack])
        
         return ASInsetLayoutSpec(insets: UIEdgeInsets(top: 0,
                                                       left: 10 + Utilities.safeArea.left,

@@ -20,6 +20,11 @@
 		181D4B6429949D0200B2F8DC /* LayoutNode+Layouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181D4B6329949D0200B2F8DC /* LayoutNode+Layouts.swift */; };
 		181D4B692994A14000B2F8DC /* LayoutOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181D4B682994A14000B2F8DC /* LayoutOverviewViewController.swift */; };
 		181D4B6B2994A2C100B2F8DC /* OverviewCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181D4B6A2994A2C100B2F8DC /* OverviewCellNode.swift */; };
+		1871D43029B9BD72007B1F8F /* DynamicListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1871D42F29B9BD72007B1F8F /* DynamicListDataSource.swift */; };
+		1871D43229B9C53C007B1F8F /* DynamicListCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1871D43129B9C53C007B1F8F /* DynamicListCellNode.swift */; };
+		1871D43629B9CA03007B1F8F /* DynamicListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1871D43529B9CA03007B1F8F /* DynamicListModel.swift */; };
+		1871D43829B9E739007B1F8F /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1871D43729B9E739007B1F8F /* UIColor.swift */; };
+		18A8EFF329B9BBEE00C9664F /* DynamicListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A8EFF229B9BBEE00C9664F /* DynamicListViewController.swift */; };
 		3213CB2D4DF3EEECD8A029CE /* Pods_ASKitDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08ABF397BDD7164FF71FE335 /* Pods_ASKitDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +45,11 @@
 		181D4B6329949D0200B2F8DC /* LayoutNode+Layouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LayoutNode+Layouts.swift"; sourceTree = "<group>"; };
 		181D4B682994A14000B2F8DC /* LayoutOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutOverviewViewController.swift; sourceTree = "<group>"; };
 		181D4B6A2994A2C100B2F8DC /* OverviewCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewCellNode.swift; sourceTree = "<group>"; };
+		1871D42F29B9BD72007B1F8F /* DynamicListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicListDataSource.swift; sourceTree = "<group>"; };
+		1871D43129B9C53C007B1F8F /* DynamicListCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicListCellNode.swift; sourceTree = "<group>"; };
+		1871D43529B9CA03007B1F8F /* DynamicListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicListModel.swift; sourceTree = "<group>"; };
+		1871D43729B9E739007B1F8F /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		18A8EFF229B9BBEE00C9664F /* DynamicListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicListViewController.swift; sourceTree = "<group>"; };
 		7C9147CFE65526CE24D2DB73 /* Pods-ASKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASKitDemo.release.xcconfig"; path = "Target Support Files/Pods-ASKitDemo/Pods-ASKitDemo.release.xcconfig"; sourceTree = "<group>"; };
 		FF36FB72586CF88CABA26B17 /* Pods-ASKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASKitDemo.debug.xcconfig"; path = "Target Support Files/Pods-ASKitDemo/Pods-ASKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +87,7 @@
 		181D4B402993772800B2F8DC /* ASKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				18A8EFEF29B9BAD100C9664F /* DynameicModule */,
 				181D4B602994964F00B2F8DC /* LayoutNode */,
 				181D4B5F2994895000B2F8DC /* Utilities */,
 				181D4B582993872E00B2F8DC /* NodeContainers */,
@@ -102,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				181D4B5D2993AB2B00B2F8DC /* Utilities.swift */,
+				1871D43729B9E739007B1F8F /* UIColor.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -125,6 +137,65 @@
 				181D4B6A2994A2C100B2F8DC /* OverviewCellNode.swift */,
 			);
 			path = Node;
+			sourceTree = "<group>";
+		};
+		1871D42D29B9BCFD007B1F8F /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				1871D42F29B9BD72007B1F8F /* DynamicListDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		1871D42E29B9BD10007B1F8F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1871D43329B9C9DE007B1F8F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1871D43529B9CA03007B1F8F /* DynamicListModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1871D43429B9C9E4007B1F8F /* Serivces */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Serivces;
+			sourceTree = "<group>";
+		};
+		18A8EFEF29B9BAD100C9664F /* DynameicModule */ = {
+			isa = PBXGroup;
+			children = (
+				1871D43429B9C9E4007B1F8F /* Serivces */,
+				1871D43329B9C9DE007B1F8F /* Models */,
+				1871D42E29B9BD10007B1F8F /* ViewModels */,
+				1871D42D29B9BCFD007B1F8F /* DataSource */,
+				18A8EFF129B9BBBE00C9664F /* Views */,
+				18A8EFF029B9BBB100C9664F /* ViewControllers */,
+			);
+			path = DynameicModule;
+			sourceTree = "<group>";
+		};
+		18A8EFF029B9BBB100C9664F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				18A8EFF229B9BBEE00C9664F /* DynamicListViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		18A8EFF129B9BBBE00C9664F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1871D43129B9C53C007B1F8F /* DynamicListCellNode.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		3A37ACB99BFE8DB6D6495B9D /* Pods */ = {
@@ -263,11 +334,16 @@
 				181D4B462993772800B2F8DC /* ViewController.swift in Sources */,
 				181D4B5E2993AB2B00B2F8DC /* Utilities.swift in Sources */,
 				181D4B6429949D0200B2F8DC /* LayoutNode+Layouts.swift in Sources */,
+				1871D43829B9E739007B1F8F /* UIColor.swift in Sources */,
+				18A8EFF329B9BBEE00C9664F /* DynamicListViewController.swift in Sources */,
+				1871D43629B9CA03007B1F8F /* DynamicListModel.swift in Sources */,
 				181D4B422993772800B2F8DC /* AppDelegate.swift in Sources */,
 				181D4B442993772800B2F8DC /* SceneDelegate.swift in Sources */,
 				181D4B5C29939E5300B2F8DC /* LayoutViewController.swift in Sources */,
 				181D4B5A29939BEF00B2F8DC /* LayoutNode.swift in Sources */,
 				181D4B6B2994A2C100B2F8DC /* OverviewCellNode.swift in Sources */,
+				1871D43229B9C53C007B1F8F /* DynamicListCellNode.swift in Sources */,
+				1871D43029B9BD72007B1F8F /* DynamicListDataSource.swift in Sources */,
 				181D4B692994A14000B2F8DC /* LayoutOverviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
